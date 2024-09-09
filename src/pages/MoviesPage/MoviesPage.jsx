@@ -27,7 +27,7 @@ export default function MoviesPage() {
   return (
     <>
       <SearchForm />
-      {movie && <MovieList movie={movie} />}
+      {movie && <MovieList movie={movie} state={{ from: location }} />}
     </>
   );
 }

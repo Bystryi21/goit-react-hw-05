@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { getMovies } from "../../service/trending-api";
+import { Link } from "react-router-dom";
 // import css from "./HomePage.module.css";
 
 export default function HomePage() {
@@ -18,7 +19,7 @@ export default function HomePage() {
       <ul>
         {movies.map((item) => (
           <li key={item.id}>
-            <h3>{item.title}</h3>
+            <Link to={`/movies/${item.id}`}>{item.title}</Link>
           </li>
         ))}
       </ul>

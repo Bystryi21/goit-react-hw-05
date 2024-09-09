@@ -13,6 +13,5 @@ const options = {
 
 export const getMovies = async () => {
   const response = await axios.get(url, options);
-  console.log(response.data.results);
   return response.data.results;
 };

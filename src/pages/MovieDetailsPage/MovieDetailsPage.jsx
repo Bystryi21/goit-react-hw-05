@@ -11,6 +11,8 @@ export default function MovieDetailsPage() {
 
   const { movieId } = useParams();
 
+  const backLinkHref = location.state?.from ?? "/movies";
+
   useEffect(() => {
     async function getMoviesDetails() {
       const response = await getDetails(movieId);
@@ -22,9 +24,7 @@ export default function MovieDetailsPage() {
 
   return (
     <>
-      <Link to={`/movies${movieId}`} state={location}>
-        Go back
-      </Link>
+      <Link to={backLinkHref}>Go back</Link>
       {movieDetails && <DetailsInfo details={movieDetails} />}
       <h2>Edditional information</h2>
       <ul>
