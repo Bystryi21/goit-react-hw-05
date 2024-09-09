@@ -14,5 +14,6 @@ export const getMoviesPage = async (query) => {
     `https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1&query=${query}`,
     options
   );
+
   return response.data.results;
 };
