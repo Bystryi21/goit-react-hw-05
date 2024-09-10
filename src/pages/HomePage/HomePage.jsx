@@ -3,6 +3,7 @@ import { getMovies } from "../../service/trending-api";
 import { Link } from "react-router-dom";
 import Error from "../../components/Error/Error";
 import Loader from "../../components/Error/Error";
+import css from "./HomePage.module.css";
 
 export default function HomePage() {
   const [movies, setMovies] = useState([]);
@@ -20,6 +21,7 @@ export default function HomePage() {
         setError(true);
       } finally {
         setLoader(false);
+        setError(false);
       }
     }
     getData();
@@ -32,7 +34,9 @@ export default function HomePage() {
       <ul>
         {movies.map((item) => (
           <li key={item.id}>
-            <Link to={`/movies/${item.id}`}>{item.title}</Link>
+            <Link to={`/movies/${item.id}`} className={css.text}>
+              {item.title}
+            </Link>
           </li>
         ))}
       </ul>

@@ -1,0 +1,16 @@
+.form {
+  padding-left: 10px;
+}
+
+.input {
+  padding: 7px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.button {
+  padding: 7px 10px;
+  margin-left: 7px;
+  border-radius: 10px;
+  border: transparent;
+}

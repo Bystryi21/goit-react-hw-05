@@ -1,6 +1,7 @@
 import { getReviews } from "../../service/movies-reviews";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import css from "./MovieReviews.module.css";
 
 export default function MovieReviews() {
   const [reviews, setReviews] = useState([]);
@@ -17,11 +18,11 @@ export default function MovieReviews() {
 
   return (
     <>
-      <ul>
+      <ul className={css.ul}>
         {reviews.map((item) => (
           <li key={item.id}>
-            <p>Author: {item.author}</p>
-            <p>{item.content}</p>
+            <h2 className={css.authorName}>Author: {item.author}</h2>
+            <p className={css.text}>{item.content}</p>
           </li>
         ))}
       </ul>

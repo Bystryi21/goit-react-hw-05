@@ -5,6 +5,7 @@ import DetailsInfo from "../../components/DetailsInfo/DetailsInfo";
 import { NavLink, Link, useLocation } from "react-router-dom";
 import Error from "../../components/Error/Error";
 import Loader from "../../components/Loader/Loader";
+import css from "./MovieDetailsPage.module.css";
 
 export default function MovieDetailsPage() {
   const [movieDetails, setMovieDetails] = useState(null);
@@ -36,17 +37,23 @@ export default function MovieDetailsPage() {
 
   return (
     <>
-      <Link to={backLinkHref}>Go back</Link>
+      <Link to={backLinkHref} className={css.goBack}>
+        Go back
+      </Link>
       {movieDetails && <DetailsInfo details={movieDetails} />}
       {loader && <Loader />}
       {error && <Error />}
-      <h2>Edditional information</h2>
-      <ul>
+      <h2 className={css.title}>Edditional information</h2>
+      <ul className={css.ul}>
         <li>
-          <NavLink to="cast">Cast</NavLink>
+          <NavLink to="cast" className={css.navText}>
+            Cast
+          </NavLink>
         </li>
         <li>
-          <NavLink to="reviews">Reviews</NavLink>
+          <NavLink to="reviews" className={css.navText}>
+            Reviews
+          </NavLink>
         </li>
       </ul>
       <Outlet />

@@ -1,6 +1,27 @@
+.wrapper {
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+
 .ul {
   list-style: none;
   display: flex;
   padding-left: 0;
   gap: 10px;
+}
+
+.img {
+  padding-top: 20px;
+}
+
+.textWrapper {
+  padding-left: 7px;
+}
+
+.title {
+  font-size: x-large;
+}
+
+.secondText {
+  font-size: large;
 }

@@ -2,6 +2,8 @@
   display: flex;
   gap: 12px;
   list-style: none;
+  padding: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .link {
