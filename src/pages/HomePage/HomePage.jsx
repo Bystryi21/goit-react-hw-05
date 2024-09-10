@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { getMovies } from "../../service/trending-api";
 import { Link } from "react-router-dom";
 import Error from "../../components/Error/Error";
-import Loader from "../../components/Error/Error";
+import Loader from "../../components/Loader/Loader";
 import css from "./HomePage.module.css";
 
 export default function HomePage() {
